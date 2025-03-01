@@ -1,4 +1,3 @@
-
 class Student:
     def __init__(self, name, surname, gender):
         self.name = name
@@ -80,6 +79,7 @@ class Lecturer(Mentor):
             f"Средняя оценка за лекции: {average_grade if not isinstance(average_grade, str) else average_grade}"
         )
 
+
 class Reviewer(Mentor):
     def rate_hw(self, student, course, grade):
         if isinstance(student, Student) and course in self.courses_attached and course in student.courses_in_progress:
@@ -109,7 +109,6 @@ lecturer2.courses_attached += ["Java"]
 
 reviewer1.courses_attached += ["Python", "Git"]
 reviewer2.courses_attached += ["Java"]
-
 
 reviewer1.rate_hw(student1, "Python", 9)
 reviewer1.rate_hw(student1, "Python", 10)
